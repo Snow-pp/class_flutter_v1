@@ -26,7 +26,7 @@ AppBarTheme appBarTheme() {
       elevation: 0.0,
       iconTheme: iconTheme(),
       titleTextStyle: GoogleFonts.nanumGothic(
-          fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.orange),
+          fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.black),
   );
 }
 
