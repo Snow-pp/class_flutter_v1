@@ -43,7 +43,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // 비동기 통신 -> Future (GET 요청)
   Future<void> _fetchTodos() async {
-    Response response = await _dio.get('https://jsonplaceholder.typicode.com/todos');
+    Response response =
+    await _dio.get('https://jsonplaceholder.typicode.com/todos');
     print(response.statusCode); // 100, 200, 300, 400, 500 정리 해두기
     print('response.data : ${response.data}');
     print('response.data type check  : ${response.data.runtimeType}');
@@ -79,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         "userId": index
                       };
                       final url = 'https://jsonplaceholder.typicode.com/posts';
-                      // 콜백 메서드를 활용한 예시 코드
+                      // 콜백 메서드르 활용한 예시 코드
                       _dio
                           .post(url,
                           data: postData,
