@@ -42,9 +42,16 @@ class UserRepositoryImpl implements UserRepository {
   }
 
   @override
-  Future<int> signUp(UserDto userDto) {
-    // TODO: implement signUp
-    throw UnimplementedError();
+  Future<int> signUp(UserDto userDto) async {
+    try {
+      Response response = await dio.post(epSignUp, data: userDto);
+      print('response ${response.toString()}');
+      print(response.statusCode);
+      return response.data;
+    } catch (e) {
+      return -1;
+    }
+
   }
   
 
